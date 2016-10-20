@@ -61,7 +61,10 @@
         "hot chocolate": 2.50
     };
 
-    function makeCoffee() {
+    var drinksOrdered = [];
+
+    function makeCoffee(drinkType) {
+        drinksOrdered.push(drinkType);
         myImage.setAttribute('src', 'static/coffee_machine.jpg');
          setTimeout(function(){ myImage.setAttribute('src', 'static/coffee_mug.jpg')}, 1500);
          setTimeout(function(){ myImage.setAttribute("src", "static/coffee_beans.jpg")}, 4000);
@@ -69,7 +72,7 @@
     };
 
 
-    myImage.addEventListener('click', makeCoffee);
+    myImage.addEventListener('click', function () { return makeCoffee('pumpkin latte');});
 
 
 </script>
